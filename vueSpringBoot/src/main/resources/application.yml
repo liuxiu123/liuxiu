@@ -1,0 +1,25 @@
+
+server:
+  port: 9090
+
+spring:
+  datasource:
+    #驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+# url路径
+    url: jdbc:mysql://localhost:3306/biaoge?serverTimezone=GMT%2b8
+# 账号密码
+    username: root
+    password: root
+
+mybatis:
+  #扫描mappers下所以的xml文件
+  mapper-locations: classpath:mappers/*xml
+  #configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
